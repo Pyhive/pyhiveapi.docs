@@ -24,8 +24,6 @@ date_format: "ordinal"
 
 permalink: /blog/:year/:month/:day/:title/
 source: docs
-destination: public/
-plugins_dir: plugins
 
 
 markdown: CommonMark
@@ -38,5 +36,9 @@ commonmark:
   extensions: ["strikethrough", "autolink", "table"]
 
 highlighter: none
+
+plugins:
+  - jekyll-time-to-read
+  - jekyll-toc
 
 theme: jekyll-theme-slate
