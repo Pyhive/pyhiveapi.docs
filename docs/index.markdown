@@ -1,3 +1,9 @@
+---
+permalink: /
+redirect_from:
+  - /docs
+---
+
 
 ![CodeQL](https://github.com/Pyhive/Pyhiveapi/workflows/CodeQL/badge.svg) ![Python Linting](https://github.com/Pyhive/Pyhiveapi/workflows/Python%20package/badge.svg)
 
