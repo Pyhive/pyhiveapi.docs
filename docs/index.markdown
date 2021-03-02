@@ -1,5 +1,5 @@
 ---
-title: My page
+title: Home
 sidebar: "docs"
 permalink: /
 redirect_from:
