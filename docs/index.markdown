@@ -1,6 +1,6 @@
 ---
 title: My page
-sidebar: doc
+sidebar: "docs"
 permalink: /
 redirect_from:
   - /docs
