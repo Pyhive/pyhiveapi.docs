@@ -1,1 +1,1 @@
-@@include[index.md](includes/docs/index.md)
+@@include[index.md](includes/docs/index.markdown)
