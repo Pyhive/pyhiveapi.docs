@@ -1,2 +1,5 @@
-# pyhiveapi.github.io
-Pyhiveapi Documentation
+---
+permalink: /docs
+redirect_from:
+  - /
+---
