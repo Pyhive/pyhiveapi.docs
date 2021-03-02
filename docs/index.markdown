@@ -1,7 +1,9 @@
 ---
- permalink: /
- redirect_from:
-   - /docs
+title: My page
+sidebar: doc
+permalink: /
+redirect_from:
+  - /docs
 ---
 
 
