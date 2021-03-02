@@ -1,3 +1,8 @@
+---
+ permalink: /
+ redirect_from:
+   - /docs
+ ---
 
 
 # Introduction
