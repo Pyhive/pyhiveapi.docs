@@ -38,3 +38,5 @@ commonmark:
   extensions: ["strikethrough", "autolink", "table"]
 
 highlighter: none
+
+theme: jekyll-theme-slate
