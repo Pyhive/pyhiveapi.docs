@@ -8,8 +8,7 @@ title: Pyhiveapi
 subtitle: Hive integration libary
 author: Pyhiveapi
 simple_search: https://www.google.com/search
-description:
-  Python libary to interface with Hive.
+description: Python libary to interface with Hive.
 
 # Default date format is "ordinal" (resulting in "July 22nd 2007")
 # You can customize the format as defined in
@@ -17,14 +16,12 @@ description:
 # Additionally, %o will give you the ordinal representation of the day
 date_format: "ordinal"
 
-
 # ----------------------- #
 #    Jekyll & Plugins     #
 # ----------------------- #
 
 permalink: /blog/:year/:month/:day/:title/
 source: docs
-
 
 markdown: CommonMark
 timezone: UTC
@@ -43,3 +40,12 @@ plugins:
   - jekyll-redirect-from
 
 theme: jekyll-theme-slate
+
+defaults:
+  # _docs
+  - scope:
+      path: ""
+      type: docs
+    values:
+      sidebar:
+        nav: "docs"
