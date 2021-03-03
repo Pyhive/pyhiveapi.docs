@@ -24,7 +24,6 @@ permalink: /blog/:year/:month/:day/:title/
 source: docs
 
 markdown: kramdown
-
 highlighter: none
 
 plugins:
