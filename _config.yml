@@ -23,14 +23,7 @@ date_format: "ordinal"
 permalink: /blog/:year/:month/:day/:title/
 source: docs
 
-markdown: CommonMark
-timezone: UTC
-liquid:
-  error_mode: strict
-
-commonmark:
-  options: ["SMART", "FOOTNOTES", "UNSAFE"]
-  extensions: ["strikethrough", "autolink", "table"]
+markdown: kramdown
 
 highlighter: none
 
