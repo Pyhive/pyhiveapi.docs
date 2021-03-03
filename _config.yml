@@ -35,10 +35,11 @@ plugins:
 theme: jekyll-theme-slate
 
 defaults:
-  # _docs
+  # Defaults for all pages
   - scope:
       path: ""
-      type: docs
     values:
-      sidebar:
-        nav: "docs"
+      layout: page
+      footer: true
+      sharing: true
+      sidebar: true
