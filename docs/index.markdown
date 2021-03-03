@@ -1,12 +1,4 @@
----
-title: Home
-sidebar:
-  title: "Sample Title"
-  nav: sidebar-sample
-permalink: /
-redirect_from:
-  - /docs
----
+
 
 
 # Introduction
