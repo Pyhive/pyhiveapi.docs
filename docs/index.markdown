@@ -1,4 +1,9 @@
-
+---
+ title: Home
+ permalink: /
+ redirect_from:
+   - /docs
+---
 
 
 # Introduction
