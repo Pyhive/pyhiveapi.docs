@@ -3,7 +3,8 @@
 #      Main Configs       #
 # ----------------------- #
 
-url: https://github.com/Pyhive/pyhiveapi.docs
+url: https://github.com/Pyhive
+baseurl: /pyhiveapi.docs
 title: Pyhiveapi
 subtitle: Hive integration libary
 author: Pyhiveapi
