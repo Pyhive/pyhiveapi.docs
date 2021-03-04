@@ -1,8 +1,8 @@
 toc:
   - title: Home
-    url: /
+    url: pyhiveapi.docs/
   - title: "Lights"
-    url: /docs/lights
+    url: pyhiveapi.docs/docs/lights
     children:
       - title: Bulbs
-        url: /docs/lights/bulbs
+        url: pyhiveapi.docs/docs/lights/bulbs
