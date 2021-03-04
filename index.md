@@ -1,5 +1,7 @@
 ---
  title: Home
+ sidebar:
+  nav: "docs"
 ---
 # Introduction
 
