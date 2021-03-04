@@ -1,22 +1,18 @@
 ---
  title: Home
- permalink: /
- redirect_from:
-   - /docs
 ---
 
 
-# Introduction
-This is a library which intefaces with the Hive smart home platform. 
+This is a library which intefaces with the Hive smart home platform.
 This library is built for to integrate with the Home Assistant platform,
 but can be used independently (See examples below.)
 
-
 ## Examples
+
 Below are examples on how to use the library independently.
 
-
 ### Log in - Using Hive Username and Password
+
 Below is an example of how to log in to Hive using your Hive Username and Hive password, using 2FA if needed, to create a pyhiveapi `session` object.
 
 ```Python
@@ -32,8 +28,8 @@ if login.get("ChallengeName") == SMS_REQUIRED:
 session.startSession()
 ```
 
-
 ### Use the session object to get devices
+
 Below is an example of how to use the `session` object to get all devices of each type from `deviceList` and store in a separate list for each device type.
 
 ```Python
@@ -45,8 +41,8 @@ Switches = session.deviceList["switch"]
 WaterHeaters = session.deviceList["water_heater"]
 ```
 
-
 ### Use the session object to interact with heating
+
 Below is an example of how to use the `session` object to interact with all the different heating actions.
 
 ```Python
@@ -69,8 +65,8 @@ if len(HeatingDevices) >= 1:
     print("Turn boost off : " + str(session.heating.turnBoostOff(HeatingZone_1)))
 ```
 
-
 ### Use the session object to interact with hotwater
+
 Below is an example of how to use the `session` object to interact with all the different hotwater actions.
 
 ```Python
@@ -89,6 +85,7 @@ if len(WaterHeaters) >= 1:
 ```
 
 ### Use the session object to interact with lights
+
 Below is an example of how to use the `session` object to interact with all the different light actions.
 
 ```Python
@@ -104,8 +101,8 @@ if len(Lights) >= 1:
     print("Get colour mode : " + str(session.light.getColorMode(Light_1)))
 ```
 
-
 ### Log in - Using Tokens
+
 Below is an example how to log in to Hive with 2FA if needed
 and get a session token.
 
@@ -133,7 +130,8 @@ else:
 ```
 
 ### Refresh Tokens
-Below is an example how to refresh your session tokens 
+
+Below is an example how to refresh your session tokens
 after they have expired
 
 ```Python
@@ -151,7 +149,8 @@ else:
 ```
 
 ### Get Hive Data - Using Tokens
-Below is an example how to data from the Hive platform 
+
+Below is an example how to data from the Hive platform
 using the session token acquired from login.
 
 ```Python
