@@ -1,12 +1,25 @@
-<div
-  style="
+<style>
+  html,
+  body {
+    height: 100%;
+    margin: 0;
+  }
+
+  .full-height {
+    height: 100%;
+    background: yellow;
+  }
+
+  .sidebar {
     border: 3px;
     border-style: solid;
     border-color: #000000;
     padding: 1em;
     float: left;
-  "
->
+  }
+</style>
+
+<div class="sidebar full_height">
   <ul>
     {% for item in site.data.sidebar[page.sidebar] %}
     <li><a href="{{ item.url }}">{{ item.title }}</a></li>
