@@ -1,7 +1,3 @@
----
- title: Home
----
-
 
 This is a library which intefaces with the Hive smart home platform.
 This library is built for to integrate with the Home Assistant platform,
