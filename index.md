@@ -1,7 +1,6 @@
 ---
-title: Home
-sidebar:
-  nav: "docs"
+ title: Home
+ sidebar: toc
 ---
 
 

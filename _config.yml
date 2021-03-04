@@ -9,7 +9,7 @@ subtitle: Hive integration libary
 author: Pyhiveapi
 simple_search: https://www.google.com/search
 description: Python libary to interface with Hive.
-theme: minimal-mistakes-jekyll
+theme: jekyll-theme-slate
 
 # Default date format is "ordinal" (resulting in "July 22nd 2007")
 # You can customize the format as defined in
