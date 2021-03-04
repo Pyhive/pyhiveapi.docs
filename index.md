@@ -1,6 +1,6 @@
 ---
- title: Home
- sidebar: toc
+title: Home
+sidebar: toc
 ---
 
 
