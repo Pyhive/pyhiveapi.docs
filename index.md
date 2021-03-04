@@ -1,6 +1,7 @@
 ---
 title: Home
 sidebar: toc
+classes: wide
 ---
 
 
