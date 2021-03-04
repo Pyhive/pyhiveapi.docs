@@ -1,8 +1,9 @@
 ---
  title: Home
- sidebar:
-  nav: "docs"
+ sidebar: toc
 ---
+{% include sidebar.html %}
+
 # Introduction
 
 {% include_relative docs/index.md %}
