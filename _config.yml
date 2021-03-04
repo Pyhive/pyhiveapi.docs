@@ -30,3 +30,11 @@ plugins:
   - jekyll-time-to-read
   - jekyll-toc
   - jekyll-redirect-from
+
+defaults:
+  # Defaults for all pages
+  - scope:
+      path: ""
+    values:
+      layout: page
+      sidebar: true
