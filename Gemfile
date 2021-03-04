@@ -2,6 +2,7 @@ source "https://rubygems.org"
 
 gem 'rdiscount'
 gem 'jekyll-redirect-from'
+gem "minimal-mistakes-jekyll"
 gem "github-pages", "~> 212", group: :jekyll_plugins
 # If you have any plugins, put them here!
 group :jekyll_plugins do
