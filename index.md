@@ -1,6 +1,6 @@
 ---
 title: Home
-sidebar: toc
+sidebar: all
 layout: default
 ---
 
