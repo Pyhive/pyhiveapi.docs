@@ -1,1 +1,4 @@
-Bulbs
+---
+title: Home
+sidebar: all
+---

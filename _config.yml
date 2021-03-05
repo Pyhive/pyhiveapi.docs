@@ -12,6 +12,11 @@ simple_search: https://www.google.com/search
 description: Python libary to interface with Hive.
 theme: jekyll-theme-slate
 
+permalink: /blog/:year/:month/:day/:title/
+markdown: kramdown
+sass:
+  sass_dir: _sass
+
 # Default date format is "ordinal" (resulting in "July 22nd 2007")
 # You can customize the format as defined in
 # http://www.ruby-doc.org/core-1.9.2/Time.html#method-i-strftime
@@ -21,11 +26,6 @@ date_format: "ordinal"
 # ----------------------- #
 #    Jekyll & Plugins     #
 # ----------------------- #
-
-permalink: /blog/:year/:month/:day/:title/
-source: docs
-
-markdown: kramdown
 
 plugins:
   - jekyll-time-to-read

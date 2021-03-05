@@ -1,7 +1,6 @@
 ---
 title: Home
 sidebar: all
-layout: default
 ---
 
 
