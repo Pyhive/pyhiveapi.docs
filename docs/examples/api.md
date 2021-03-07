@@ -6,7 +6,7 @@ sidebar: example
 
 Below are examples on how to use the library independently with the API.
 
-# Log in - Using Tokens
+## Log in - Using Tokens
 
 Below is an example how to log in to Hive with 2FA if needed
 and get a session token.
@@ -53,7 +53,7 @@ else:
     raise Hive.NoApiToken
 ```
 
-### Get Hive Data - Using Tokens
+## Get Hive Data - Using Tokens
 
 Below is an example how to data from the Hive platform
 using the session token acquired from login.

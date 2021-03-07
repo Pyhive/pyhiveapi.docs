@@ -13,59 +13,22 @@ jobs:
         uses: actions/setup-node@v2.1.5
         with:
           node-version: 12.x
-      - name: Setup NPM cache
-        uses: actions/cache@v2.1.4
-        with:
-          path: ~/.npm
-          key: npm-${{ hashFiles('**/package-lock.json') }}
-          restore-keys: |
-            npm-
-      - name: Install dependencies
-        run: npm install
+      - name: Lint Code Base
+        uses: github/super-linter@v3
         env:
-          CI: true
-      - name: Run remark lint
-        run: npm run markdown:lint
+          VALIDATE_ALL_CODEBASE: false
+          DEFAULT_BRANCH: master
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
   secretlint:
     name: "Secretlint"
     runs-on: ubuntu-18.04
-    strategy:
-      matrix:
-        node-version: [12]
     steps:
       - name: checkout
         uses: actions/checkout@v2
-      - name: setup Node ${{ matrix.node-version }}
-        uses: actions/setup-node@v1
-        with:
-          node-version: ${{ matrix.node-version }}
       - name: Install
-        run: npm install
+        uses: xt0rted/markdownlint-problem-matcher@v1
       - name: Lint with Secretlint
-        run: npx secretlint "**/*"
-  textlint:
-    name: Lint Text
-    runs-on: ubuntu-latest
-    steps:
-      - name: Check out files from GitHub
-        uses: actions/checkout@v2
-      - name: Setting up Node.js ${{ matrix.node-version }}
-        uses: actions/setup-node@v2.1.5
-        with:
-          node-version: 12.x
-      - name: Setup NPM cache
-        uses: actions/cache@v2.1.4
-        with:
-          path: ~/.npm
-          key: npm-${{ hashFiles('**/package-lock.json') }}
-          restore-keys: |
-            npm-
-      - name: Install dependencies
-        run: npm install
-        env:
-          CI: true
-      - name: Run textlint
-        run: npm run textlint
+        run: markdownlint **/*.md --ignore node_modules
   build:
     name: Jekyll build
     runs-on: ubuntu-latest
