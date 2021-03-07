@@ -1,19 +1,12 @@
 ---
-title: Home
-sidebar: all
+title: Session
+sidebar: example
 ---
+# Session Examples
 
-# Introduction
+Below are examples on how to use the library with a Hive session.
 
-This is a library which intefaces with the Hive smart home platform.
-This library is built for to integrate with the Home Assistant platform,
-but can be used independently (See examples below.)
-
-## Examples
-
-Below are examples on how to use the library independently.
-
-### Log in - Using Hive Username and Password
+# Log in - Using Hive Username and Password
 
 Below is an example of how to log in to Hive using your Hive Username and Hive password, using 2FA if needed, to create a pyhiveapi `session` object.
 
@@ -30,7 +23,7 @@ if login.get("ChallengeName") == SMS_REQUIRED:
 session.startSession()
 ```
 
-### Use the session object to get devices
+## Use the session object to get devices
 
 Below is an example of how to use the `session` object to get all devices of each type from `deviceList` and store in a separate list for each device type.
 
@@ -58,7 +51,7 @@ if len(HeatingDevices) >= 1:
     print("Target temperature : " + str(session.heating.targetTemperature(HeatingZone_1)))
     print("Get Min / Max temperatures : " + str(session.heating.minmaxTemperature(HeatingZone_1)))
     print("Get whether boost is currently On/Off : " + str(session.heating.getBoost(HeatingZone_1)))
-    print("Boost time remaining : " + str(session.heating.getBoostTime(HeatingZone_1)))    
+    print("Boost time remaining : " + str(session.heating.getBoostTime(HeatingZone_1)))
     print("Get schedule now/next/later : " + str(session.heating.getScheduleNowNextLater(HeatingZone_1)))
     print("Set mode to SCHEDULE: " + str(session.heating.setMode(HeatingZone_1, "SCHEDULE")))
     print("Current operation : " + str(session.heating.currentOperation(HeatingZone_1)))
@@ -101,61 +94,4 @@ if len(Lights) >= 1:
     print("Get colour temperature : " + str(session.light.getColorTemp(Light_1)))
     print("Get colour : " + str(session.light.getColor(Light_1)))
     print("Get colour mode : " + str(session.light.getColorMode(Light_1)))
-```
-
-### Log in - Using Tokens
-
-Below is an example how to log in to Hive with 2FA if needed
-and get a session token.
-
-```Python
-import pyhiveapi as Hive
-
-tokens = {}
-auth = Hive.HiveAuth('username', 'password')
-session = auth.login()
-if session.get("ChallengeName") == Hive.SMS_REQUIRED:
-    # Complete SMS 2FA.
-    code = input("Enter your 2FA code: ")
-    session = auth.sms_2fa(code, session)
-
-if 'AuthenticationResult' in session:
-    session = session['AuthenticationResult']
-    tokens.update(
-        {"token": session["IdToken"]})
-    tokens.update(
-        {"refreshToken": session["RefreshToken"]})
-    tokens.update(
-        {"accessToken": session["AccessToken"]})
-else:
-    raise Hive.NoApiToken
-```
-
-### Refresh Tokens
-
-Below is an example how to refresh your session tokens
-after they have expired
-
-```Python
-api = Hive.HiveApi()
-newTokens = api.refreshTokens(tokens)
-if newTokens['original'] == 200:
-    tokens.update(
-        {"token": newTokens['parsed']["token"]})
-    tokens.update(
-        {"refreshToken": newTokens['parsed']["refreshToken"]})
-    tokens.update(
-        {"accessToken": newTokens['parsed']["accessToken"]})
-else:
-    raise Hive.NoApiToken
-```
-
-### Get Hive Data - Using Tokens
-
-Below is an example how to data from the Hive platform
-using the session token acquired from login.
-
-```Python
-api = Hive.HiveApi()
-data = api.getAllData(tokens["token"])
 ```

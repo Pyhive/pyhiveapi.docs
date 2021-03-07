@@ -10,7 +10,8 @@ Below are examples on how to use the library independently.
 
 ### Log in - Using Hive Username and Password
 
-Below is an example of how to log in to Hive using your Hive Username and Hive password, using 2FA if needed, to create a pyhiveapi `session` object.
+Below is an example of how to log in to Hive using your Hive Username and Hive password,
+using 2FA if needed, to create a pyhiveapi `session` object.
 
 ```Python
 from pyhiveapi import Hive, SMS_REQUIRED
@@ -27,7 +28,8 @@ session.startSession()
 
 ### Use the session object to get devices
 
-Below is an example of how to use the `session` object to get all devices of each type from `deviceList` and store in a separate list for each device type.
+Below is an example of how to use the `session` object to get all devices
+of each type from `deviceList` and store in a separate list for each device type.
 
 ```Python
 BinarySensors = session.deviceList["binary_sensor"]
@@ -40,7 +42,8 @@ WaterHeaters = session.deviceList["water_heater"]
 
 ### Use the session object to interact with heating
 
-Below is an example of how to use the `session` object to interact with all the different heating actions.
+Below is an example of how to use the `session` object to i
+nteract with all the different heating actions.
 
 ```Python
 if len(HeatingDevices) >= 1:
@@ -53,7 +56,7 @@ if len(HeatingDevices) >= 1:
     print("Target temperature : " + str(session.heating.targetTemperature(HeatingZone_1)))
     print("Get Min / Max temperatures : " + str(session.heating.minmaxTemperature(HeatingZone_1)))
     print("Get whether boost is currently On/Off : " + str(session.heating.getBoost(HeatingZone_1)))
-    print("Boost time remaining : " + str(session.heating.getBoostTime(HeatingZone_1)))    
+    print("Boost time remaining : " + str(session.heating.getBoostTime(HeatingZone_1)))
     print("Get schedule now/next/later : " + str(session.heating.getScheduleNowNextLater(HeatingZone_1)))
     print("Set mode to SCHEDULE: " + str(session.heating.setMode(HeatingZone_1, "SCHEDULE")))
     print("Current operation : " + str(session.heating.currentOperation(HeatingZone_1)))
@@ -64,7 +67,8 @@ if len(HeatingDevices) >= 1:
 
 ### Use the session object to interact with hotwater
 
-Below is an example of how to use the `session` object to interact with all the different hotwater actions.
+Below is an example of how to use the `session` object to interact with
+all the different hotwater actions.
 
 ```Python
 if len(WaterHeaters) >= 1:
@@ -83,7 +87,8 @@ if len(WaterHeaters) >= 1:
 
 ### Use the session object to interact with lights
 
-Below is an example of how to use the `session` object to interact with all the different light actions.
+Below is an example of how to use the `session` object to interact
+with all the different light actions.
 
 ```Python
 if len(Lights) >= 1:

@@ -1,21 +1,35 @@
 all:
   - title: Home
     url: /pyhiveapi.docs/
-  - title: "Lights"
-    url: /pyhiveapi.docs/docs/lights
+  - title: "API"
     children:
-      - title: Bulbs
-        url: /pyhiveapi.docs/docs/lights/bulbs
-  - title: "Switch"
-    url: /pyhiveapi.docs/docs/lights
+      - title: Lights
+        url: /pyhiveapi.docs/docs/api/lights
+      - title: Plugs
+        url: /pyhiveapi.docs/docs/api/plugs
   - title: "Examples"
-    url: /pyhiveapi.docs/docs/lights
-
-light:
-  - title: Home
-    url: /pyhiveapi.docs
-  - title: "Lights"
-    url: /pyhiveapi.docs/docs/lights
     children:
-      - title: Bulbs
-        url: /pyhiveapi.docs/docs/lights/bulbs
+      - title: API
+        url: /pyhiveapi.docs/docs/examples/api
+      - title: Session
+        url: /pyhiveapi.docs/docs/examples/api
+
+api:
+  - title: Home
+    url: /pyhiveapi.docs/
+  - title: "API"
+    children:
+      - title: Lights
+        url: /pyhiveapi.docs/docs/api/lights
+      - title: Plugs
+        url: /pyhiveapi.docs/docs/api/plugs
+
+example:
+  - title: Home
+    url: /pyhiveapi.docs/
+  - title: Examples
+    children:
+      - title: API
+        url: /pyhiveapi.docs/docs/examples/api
+      - title: Session
+        url: /pyhiveapi.docs/docs/examples/session

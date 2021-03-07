@@ -1,0 +1,4 @@
+---
+title: Plugs
+sidebar: api
+---

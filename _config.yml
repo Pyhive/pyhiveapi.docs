@@ -14,8 +14,14 @@ theme: jekyll-theme-slate
 
 permalink: /blog/:year/:month/:day/:title/
 markdown: kramdown
-sass:
-  sass_dir: _sass
+pre-commit:
+  - check: FrontMatterVariableExists
+    variables: ["description", "image"]
+  - check: FrontMatterVariableIsNotDuplicate
+    variables: ["description"]
+  - check: FrontMatterVariableMeetsLengthRequirements
+    variables: ["description", "title"]
+  - check: NoDuplicateTags
 
 # Default date format is "ordinal" (resulting in "July 22nd 2007")
 # You can customize the format as defined in

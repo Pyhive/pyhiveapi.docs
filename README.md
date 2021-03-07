@@ -1,1 +1,1 @@
-https://pyhive.github.io/pyhiveapi.docs/
+<https://pyhive.github.io/pyhiveapi.docs/>
