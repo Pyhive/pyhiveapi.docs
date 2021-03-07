@@ -33,7 +33,13 @@ jobs:
         with:
           node-version: ${{ matrix.node-version }}
       - name: Install
-        run: npm install
+        run: |
+          npm install
+          npm install husky lint-staged
+          npm install secretlint @secretlint/secretlint-rule-preset-recommend --save-dev
+          npm install @secretlint/secretlint-rule-basicauth  --save-dev
+          npm install @secretlint/secretlint-rule-pattern  --save-dev
+          npm install @secretlint/secretlint-rule-no-homedir  --save-dev
       - name: Lint with Secretlint
         run: npx secretlint "**/*"
   build:
