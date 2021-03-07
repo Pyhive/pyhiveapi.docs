@@ -1,4 +1,4 @@
-name: home-assistant.io Test
+name: Pyhiveapi Docs
 
 on: [push, pull_request]
 
