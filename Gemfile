@@ -4,7 +4,7 @@ gem 'rdiscount'
 gem 'jekyll-redirect-from'
 gem "webrick"
 # If you have any plugins, put them here!
-gem "github-pages", "~> 212", group: :jekyll_plugins
+gem "github-pages", "~> 214", group: :jekyll_plugins
 group :jekyll_plugins do
   gem "jekyll-feed", "~> 0.12"
   gem 'jekyll-pre-commit'
