@@ -15,21 +15,18 @@ and get a session token.
 import pyhiveapi as Hive
 
 tokens = {}
-auth = Hive.HiveAuth('username', 'password')
+auth = Hive.Auth("khole_47@me.com", "cussyh-Podpeb-sanpo3")
 session = auth.login()
 if session.get("ChallengeName") == Hive.SMS_REQUIRED:
     # Complete SMS 2FA.
     code = input("Enter your 2FA code: ")
     session = auth.sms_2fa(code, session)
 
-if 'AuthenticationResult' in session:
-    session = session['AuthenticationResult']
-    tokens.update(
-        {"token": session["IdToken"]})
-    tokens.update(
-        {"refreshToken": session["RefreshToken"]})
-    tokens.update(
-        {"accessToken": session["AccessToken"]})
+if "AuthenticationResult" in session:
+    session = session["AuthenticationResult"]
+    tokens.update({"token": session["IdToken"]})
+    tokens.update({"refreshToken": session["RefreshToken"]})
+    tokens.update({"accessToken": session["AccessToken"]})
 else:
     raise Hive.NoApiToken
 ```
@@ -40,15 +37,12 @@ Below is an example how to refresh your session tokens
 after they have expired
 
 ```Python
-api = Hive.HiveApi()
+api = Hive.API()
 newTokens = api.refreshTokens(tokens)
-if newTokens['original'] == 200:
-    tokens.update(
-        {"token": newTokens['parsed']["token"]})
-    tokens.update(
-        {"refreshToken": newTokens['parsed']["refreshToken"]})
-    tokens.update(
-        {"accessToken": newTokens['parsed']["accessToken"]})
+if newTokens["original"] == 200:
+    tokens.update({"token": newTokens["parsed"]["token"]})
+    tokens.update({"refreshToken": newTokens["parsed"]["refreshToken"]})
+    tokens.update({"accessToken": newTokens["parsed"]["accessToken"]})
 else:
     raise Hive.NoApiToken
 ```
